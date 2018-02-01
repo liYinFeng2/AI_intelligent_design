@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #efefef;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  background: #081726;
+}
+.header span {
+  color: #fff;
+  font-size: 22px;
+  line-height: 50px;
+}
+.header span:first-child {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.setjob-content {
+  position: absolute;
+  right: 0;
+  width: 270px;
+  padding: 0 22px;
+  overflow: hidden;
+  border-left: 1px solid #ddd;
+  background: #fff;
+}
+.setjob-content .main-title,.setjob-content .sub-title,.setjob-content .bg-file,.setjob-content .sel-size {
+  color: #999;
+  font-size: 14px;
+}
+.setjob-content .main-title span,.setjob-content .sub-title span,.setjob-content .bg-file span,.setjob-content .sel-size span {
+  float: left;
+  margin-bottom: 8px;
+}
+.setjob-content .sel-size span {
+  margin-bottom: 0;
+}
+.setjob-content .main-title input,.setjob-content .sub-title input {
+  width: 254px;
+  height: 36px;
+  border: 1px solid #ddd;
+  padding: 0 8px;
+  margin-bottom: 16px;
+  color: #333;
+}
+.setjob-content input:focus {
+  outline: none;
+}
+.setjob-content .main-title {
+  margin-top: 42px;
+}
+.setjob-content .sel-size ul {
+  float: left;
+  width: 270px;
+}
+.setjob-content .sel-size ul li {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  float: left;
+  margin-top: 12px;
+  list-style: none;
+  font-size: 12px;
+}
+.setjob-content .sel-size ul li:hover {
+  cursor: pointer;
+}
+.setjob-content .sel-size ul .active {
+  border: 1px solid #de0154;
+}
+.setjob-content .sel-size ul li:nth-of-type(2) {
+  margin: 12px 12px 0 12px;
+}
+.upload-file {
+  position: relative;
+  width: 272px;
+  height: 38px;
+  margin-bottom: 16px;
+  float: left;
+}
+.filename{
+  float:left;
+  display:inline-block;
+  outline:0 none;
+  width: 214px;
+  height:36px;
+  margin:0;
+  padding: 0 8px;
+  cursor: default;
+  border:1px solid #ccc;
+}
+#upload-btn{
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-left: none;
+  cursor: pointer;
+}
+input[type=file]{
+  position:absolute;
+  top:0; right:0; bottom:0;
+  border:0;
+  padding:0; margin:0;
+  height:38px;
+  cursor:pointer;
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity:0;
+}
+.container {
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  /*// width: 800px;
+  position: absolute;
+  // left: 50%;
+  // margin-left: -400px;
+  // top: 320px;
+  top:50%;  
+  left: 44%;  
+  -webkit-transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);  */
+}
+.resize-container {
+  position: relative;
+  display: inline-block;
+  cursor: move;
+  margin: 0 auto;
+  // opacity: 0.4;
+}
+.resize-container img {
+  display: block;
+}
+// .resize-container:hover img,
+// .resize-container:active img {
+//   outline: 2px dashed rgba(222, 60, 80, .9);
+// }
+.resize-handle-ne,
+.resize-handle-se,
+.resize-handle-nw,
+.resize-handle-sw {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: rgba(222, 60, 80, .9);
+  z-index: 999;
+}
+.resize-handle-nw {
+  top: -5px;
+  left: -5px;
+  cursor: nw-resize;
+}
+.resize-handle-sw {
+  bottom: -5px;
+  left: -5px;
+  cursor: sw-resize;
+}
+.resize-handle-ne {
+  top: -5px;
+  right: -5px;
+  cursor: ne-resize;
+}
+.resize-handle-se {
+  bottom: -5px;
+  right: -5px;
+  cursor: se-resize;
+}
+.overlay {
+  // display: none;
+  // position: absolute;
+  // left: 50%;
+  // margin-left: -200px;
+  z-index: 999;
+  // width: 400px;
+  // height: 336px;
+  border: dashed 1px #999;
+  box-sizing: content-box;
+  pointer-events: none;
+  opacity: 1;
+  background: url(../../img/0.jpg);
+  background-position-y: 0; 
+  background-position-x: 0; 
+  /*position: absolute;*/
+/*  top:50%; */ 
+  /*left: 50%;  
+  -webkit-transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);   */ 
+}
+
+.btn-crop {
+  position: absolute;
+  vertical-align: bottom;
+  right: -80px;
+  bottom: 5px;
+  padding: 6px 10px;
+  z-index: 999;
+  background-color: #de3c50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+.btn-crop img {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+#title {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+.move-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px dashed #999;
+  z-index: 2000;
+}

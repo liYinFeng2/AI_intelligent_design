@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI智能设计</title>
+  <link rel="stylesheet" type="text/css" href="build/css/job.css">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="dist/css/index.min.css">
+</head>
+<body>
+  <div class="header">
+    <span>汽车之家 ·</span>
+    <span>AI智能设计</span>
+    <!--<a class="login">登录<i class="fa fa-chevron-down"></i></a>-->
+    <a class="fabu" >预览发布<i class="fa fa-send-o"></i></a>
+    <!--<a class="save">保存<i class="fa fa-save"></i></a>-->
+  </div>
+  <div class="move-line"></div>
+  <div class="logo-line"></div>
+  
+  <div class="design_content"></div>
+  
+  <div class="logo_content">
+  	<img src="" alt="" style="zoom: 0.1;"/>
+  </div>
+  
+  <div class="design_container">
+    <div class="content">
+    	<!--<div id="sure">确定缩放比</div>-->
+      <div class="component">
+        <!-- This image must be on the same domain as the demo or it will not work on a local file system -->
+        <!-- http://en.wikipedia.org/wiki/Cross-origin_resource_sharing -->
+        <img id="resize-image" class="resize-image" src="" alt="image for resizing">
+        <!-- <button class="btn-crop js-crop">Crop</button> -->
+      </div>
+    </div>
+    <!-- /content -->
+  </div>
+  <div class="setjob-content">
+  	<!-- 主标题  -->
+    <div class="main-title">
+      <span class="titleTop">主题</span><i class="fa fa-chevron-down" name="box1Btn"></i>
+      <div class="box1BtnBox">
+      	<input type="text" value="璀璨于形,叱咤于心" class="title title1">
+      	<i class="fa fa-check submittitle1 "></i>
+      </div>
+    </div>
+    <!-- 副标题  -->
+    <div class="sub-title box1BtnBox">
+      <span>副标题</span>
+      <input type="text" value="奥迪三十周年车型,焕然问世" class="title title2">
+      <i class="fa fa-check submittitle2"></i>
+    </div>
+     <!-- 背景  -->
+    <div class="bg-file clearfix box1BtnBox">
+      <span>背景</span>
+      <div class="upload-file">
+        <input type="text" class="filename" value="0.jpg" readonly="readonly"/>
+        <svg class="icon" id="upload-btn" viewBox="0 0 1024 1024" version="1.1" p-id="7035" width="24" height="24"><defs><style type="text/css"/></defs><path d="M883.824959 186.953949 492.95883 186.953949c-15.957437 0-41.7161-10.666944-53.002145-21.954011l-58.121745-58.121745c-22.400173-22.400173-63.185065-39.293935-94.866624-39.293935L134.845663 67.584258c-40.206724 0-72.912613 32.705889-72.912613 72.912613l0 742.172263c0 40.205701 32.705889 77.005838 72.912613 77.005838l748.984413 0c40.201607 0 72.90852-36.800138 72.90852-77.005838L956.738595 259.866562C956.738595 219.664955 924.031683 186.953949 883.824959 186.953949zM142.008806 126.790708l144.959509 0c15.96153 0 41.720194 10.665921 53.000098 21.952988l58.123792 67.331501c22.404266 22.400173 63.183018 39.295981 94.866624 39.295981l390.871245 0c7.427156 0 13.706163 6.272867 13.706163 13.706163l0 51.376111L128.303666 320.453453 128.303666 140.495848C128.303666 133.064598 134.57858 126.790708 142.008806 126.790708zM883.830075 896.373251 142.008806 896.373251c-7.43125 0-13.706163-6.274914-13.706163-13.706163L128.302643 381.847731l769.232572 0 0 500.82038C897.536238 890.098337 891.257232 896.373251 883.830075 896.373251z" p-id="7036" fill="#666666"/><path d="M631.370203 618.334817 541.59862 618.334817l0-89.77056c0-16.349363-13.249769-29.599132-29.598108-29.599132-16.349363 0-29.604248 13.249769-29.604248 29.599132l0 89.77056-89.772606 0c-16.34834 0-29.599132 13.255908-29.599132 29.604248 0 16.349363 13.250792 29.599132 29.599132 29.599132l89.772606 0L482.396263 767.308757c0 16.349363 13.254885 29.604248 29.604248 29.604248 16.34834 0 29.598108-13.254885 29.598108-29.604248l0-89.771583 89.772606 0c16.34834 0 29.603225-13.249769 29.603225-29.599132C660.973428 631.590725 647.718543 618.334817 631.370203 618.334817z" p-id="7037" fill="#666666"/></svg>
+        <input type="file" size="30" id="upload" />
+      </div>
+    </div>
+    <!-- 字体  -->
+    <!--<div class="sub-title">
+      <span class="titleTop">字体</span><i class="fa fa-chevron-down" name="box2Btn"></i>
+      <input type="text" value="微软雅黑" readonly="" name="fontname">
+      <div class="font-list" style="display: none;">
+      	<ul>
+      		<li>方正超粗黑简体</li>
+      		<li>方正大标宋简体</li>
+      		<li>方正正大黑简体</li>
+      		<li>方正大雅宋简体</li>
+      		<li>方正兰亭黑简体</li>
+      		<li>方正兰亭细黑简体</li>
+      		<li>微软雅黑细体</li>
+      		<li>方正标雅宋简体</li>
+      		<li>方正粗谭黑简体</li>
+      		<li>方正仿宋简体</li>
+      		<li>方正汉简简体</li>
+      		<li>方正汉真广标简体</li>
+      		<li>方正楷体简体</li>
+      		<li>方正隶书简体</li>
+      		
+      		<li>方正新报宋简体</li>
+      		<li>方正 启迪简体</li>
+      		<li>方正趣宋简体</li>
+      		<li>方正尚酷简体</li>
+      		<li>方正手绘简体_准</li>
+      		<li>方正淘乐简体</li>
+      		<li>方正细等线简体</li>
+      		<li>方正子集-吕建德行楷减退</li>
+      		<li>方正综艺简体</li>
+      		<li>方正正准黑简体</li>
+      	</ul>
+      </div>
+    </div>-->
+   
+    <!-- 尺寸  -->
+    <div class="sel-size clearfix">
+      <span class="titleTop">尺寸</span><i class="fa fa-chevron-down" name="box3Btn"></i>
+      <div class="size-group box3BtnBox clearfix">
+      	<div class="active" boxname="common-usesize">常用尺寸</div>
+      	<div class="" boxname="user-definedsize">自定义尺寸</div>
+      </div>
+      <!-- 常用尺寸  -->
+      <div class="common-usesize sizebox box3BtnBox" >
+	      	<ul>
+		        <li size='110,90'>110*90px</li>
+		        <li size='120,90'>120*90px</li>
+		        <li size='178,240'>178*240px</li>
+		     </ul>
+	       <ul>
+	        <li size='184,92'>184*92px</li>
+	        <li size='190,172'>190*172px</li>
+	        <li size='200,200'>200*200px</li>
+	      </ul> 
+	      <ul class="sizeflaghide">
+	        <li size='240,490'>240*490px</li>
+	        <li size='240,405'>240*405px</li>
+	        <!-- <li size='990,90'>990*90px</li> -->
+	        <li size='250,50'>250*50px</li>
+	      </ul>
+	      <ul class="sizeflaghide">
+	        <li size='290,490'>300*250px</li>
+	        <li size='790,90'>790*90px</li>
+	        <li size='300,200'>300*200px</li>
+	      </ul>
+	      <ul class="sizeflaghide">
+	        <li size='990,90'>990*90px</li>
+	        <li size='300,200'>300*200px</li>
+	        <li size='300,250'>300*250px</li>
+	      </ul>
+	      <ul class="sizeflaghide">
+	        <li size='350,90'>350*90px</li>
+	        <li size='368,184'>368*184px</li>
+	        <li size='540,90'>540*90px</li>
+	      </ul>
+	      <ul class="sizeflaghide">
+	        <li size='620,60'>620*60px</li>
+	        <li size='640,90'>640*90px</li>
+	        <li size='790,60'>790*60px</li>
+	      </ul>
+	      <ul class="sizeflaghide">
+	        <li size='950,90'>950*90px</li>
+	        <li size='990,90'>990*90px</li>
+	        <li size='1000,90'>1000*90px</li>
+	      </ul>
+	      <ul>
+	         <li size='1000,330'>1000*330px</li> 
+	        <li class="seemore">查看更多</li>
+	      </ul>
+      </div>
+      <!-- 自定义尺寸  -->
+      <div class="user-definedsize sizebox box3BtnBox"  style="display: none;">
+      	<div class="size-input">
+      		<span class="size-text">W:</span>
+      		<input type="text" class="size-width" placeholder="像素">
+      	</div>
+      	<div class="size-input">
+      		<span class="size-text">H:</span>
+      		<input type="text" class="size-height" placeholder="像素">
+      	</div>
+      	<div class="add-btn addsize">＋</div>
+      	<ul class="definedsizeList">
+	        <!--<li size='200,200'><span>200*200px</span><span class="deletesize">×</span></li>-->	
+	        <!--<li size='200,200'><span>200*200px</span><span class="deletesize">×</span></li>	
+	        <li size='200,200'><span>200*200px</span><span class="deletesize">×</span></li>	-->
+	      </ul>
+      </div>      
+    </div>
+    <!-- 品牌LOGO  -->
+    <div class="logo-list">
+      <span class="titleTop">品牌LOGO</span><i class="fa fa-chevron-down" name="box4Btn"></i>
+      <div class="clearfix logobox box4BtnBox">
+      	<div class="logoList">
+	      	<ul>
+	      		<li><img src="img/logo/东风小康.jpg"   height="100" width="100"  name="东风小康.jpg"/></li>
+	      		<li><img src="img/logo/朗世_一汽丰田.jpg"   height="100" width="100"  name="朗世_一汽丰田.jpg"/></li>
+				<li><img src="img/logo/本田_东风.jpg"   height="100" width="100"  name="本田_东风.jpg"/></li>
+				<li><img src="img/logo/本田_广汽.jpg"   height="100" width="100"  name="本田_广汽.jpg"/></li>
+				<li><img src="img/logo/本田_进口_.jpg"   height="100" width="100"  name="本田_进口_.jpg"/></li>
+				<li><img src="img/logo/林肯.jpg"   height="100" width="100"  name="林肯.jpg"/></li>
+				<li><img src="img/logo/标致_东风.jpg"   height="100" width="100"  name="标致_东风.jpg"/></li>
+				<li><img src="img/logo/标致_进口_.jpg"   height="100" width="100"  name="标致_进口_.jpg"/></li>
+				<li><img src="img/logo/欧宝.jpg"   height="100" width="100"  name="欧宝.jpg"/></li>
+				<li><img src="img/logo/欧朗_一汽欧朗.jpg"   height="100" width="100"  name="欧朗_一汽欧朗.jpg"/></li>
+				<li><img src="img/logo/欧联_广马汽车.jpg"   height="100" width="100"  name="欧联_广马汽车.jpg"/></li>
+				<li><img src="img/logo/正道汽车.jpg"   height="100" width="100"  name="正道汽车.jpg"/></li>
+				<li><img src="img/logo/比亚迪.jpg"   height="100" width="100"  name="比亚迪.jpg"/></li>
+				<li><img src="img/logo/比速汽车.jpg"   height="100" width="100"  name="比速汽车.jpg"/></li>
+				<li><img src="img/logo/永源.jpg"   height="100" width="100"  name="永源.jpg"/></li>
+				<li><img src="img/logo/汉腾汽车.jpg"   height="100" width="100"  name="汉腾汽车.jpg"/></li>
+				<li><img src="img/logo/江淮.jpg"   height="100" width="100"  name="江淮.jpg"/></li>
+				<li><img src="img/logo/江铃.jpg"   height="100" width="100"  name="江铃.jpg"/></li>
+				<li><img src="img/logo/江铃集团新能源.jpg"   height="100" width="100"  name="江铃集团新能源.jpg"/></li>
+				<li><img src="img/logo/江铃集团轻汽.jpg"   height="100" width="100"  name="江铃集团轻汽.jpg"/></li>
+				<li><img src="img/logo/沃克斯豪尔.jpg"   height="100" width="100"  name="沃克斯豪尔.jpg"/></li>
+				<li><img src="img/logo/沃尔沃_亚太.jpg"   height="100" width="100"  name="沃尔沃_亚太.jpg"/></li>
+				<li><img src="img/logo/沃尔沃_进口_.jpg"   height="100" width="100"  name="沃尔沃_进口_.jpg"/></li>
+				<li><img src="img/logo/沃尔沃_长安.jpg"   height="100" width="100"  name="沃尔沃_长安.jpg"/></li>
+				<li><img src="img/logo/法拉利.jpg"   height="100" width="100"  name="法拉利.jpg"/></li>
+				<li><img src="img/logo/泰克鲁斯·腾风.jpg"   height="100" width="100"  name="泰克鲁斯·腾风.jpg"/></li>
+				<li><img src="img/logo/泰卡特.jpg"   height="100" width="100"  name="泰卡特.jpg"/></li>
+				<li><img src="img/logo/海格_苏州金龙.jpg"   height="100" width="100"  name="海格_苏州金龙.jpg"/></li>
+				<li><img src="img/logo/海马.jpg"   height="100" width="100"  name="海马.jpg"/></li>
+				<li><img src="img/logo/海马_一汽.jpg"   height="100" width="100"  name="海马_一汽.jpg"/></li>
+				<li><img src="img/logo/游侠_电车.jpg"   height="100" width="100"  name="游侠_电车.jpg"/></li>
+				<li><img src="img/logo/潍柴英致_潍柴汽车.jpg"   height="100" width="100"  name="潍柴英致_潍柴汽车.jpg"/></li>
+				<li><img src="img/logo/特斯拉.jpg"   height="100" width="100"  name="特斯拉.jpg"/></li>
+				<li><img src="img/logo/猎豹汽车.jpg"   height="100" width="100"  name="猎豹汽车.jpg"/></li>
+				<li><img src="img/logo/玛莎拉蒂.jpg"   height="100" width="100"  name="玛莎拉蒂.jpg"/></li>
+				<li><img src="img/logo/现代_四川现代.jpg"   height="100" width="100"  name="现代_四川现代.jpg"/></li>
+				<li><img src="img/logo/现代_进口_.jpg"   height="100" width="100"  name="现代_进口_.jpg"/></li>
+				<li><img src="img/logo/瑞驰新能源.jpg"   height="100" width="100"  name="瑞驰新能源.jpg"/></li>
+				<li><img src="img/logo/电咖_汽车.jpg"   height="100" width="100"  name="电咖_汽车.jpg"/></li>
+				<li><img src="img/logo/知豆_电动车.jpg"   height="100" width="100"  name="知豆_电动车.jpg"/></li>
+				<li><img src="img/logo/福汽启腾_福汽新龙马.jpg"   height="100" width="100"  name="福汽启腾_福汽新龙马.jpg"/></li>
+				<li><img src="img/logo/福特_江铃福特.jpg"   height="100" width="100"  name="福特_江铃福特.jpg"/></li>
+				<li><img src="img/logo/福特_进口.jpg"   height="100" width="100"  name="福特_进口.jpg"/></li>
+				<li><img src="img/logo/福田乘用车.jpg"   height="100" width="100"  name="福田乘用车.jpg"/></li>
+				<li><img src="img/logo/福迪.jpg"   height="100" width="100"  name="福迪.jpg"/></li>
+				<li><img src="img/logo/科尼赛克.jpg"   height="100" width="100"  name="科尼赛克.jpg"/></li>
+				<li><img src="img/logo/红旗_一汽红旗.jpg"   height="100" width="100"  name="红旗_一汽红旗.jpg"/></li>
+				<li><img src="img/logo/纳智捷_东风裕隆.jpg"   height="100" width="100"  name="纳智捷_东风裕隆.jpg"/></li>
+				<li><img src="img/logo/纳智捷_裕隆汽车.jpg"   height="100" width="100"  name="纳智捷_裕隆汽车.jpg"/></li>
+				<li><img src="img/logo/腾势.jpg"   height="100" width="100"  name="腾势.jpg"/></li>
+				<li><img src="img/logo/艾康尼克ICONIQ_Motors.jpg"   height="100" width="100"  name="艾康尼克ICONIQ_Motors.jpg"/></li>
+				<li><img src="img/logo/英菲尼迪_东风英菲尼迪.jpg"   height="100" width="100"  name="英菲尼迪_东风英菲尼迪.jpg"/></li>
+				<li><img src="img/logo/英菲尼迪_进口_.jpg"   height="100" width="100"  name="英菲尼迪_进口_.jpg"/></li>
+				<li><img src="img/logo/荣威_上汽集团.jpg"   height="100" width="100"  name="荣威_上汽集团.jpg"/></li>
+				<li><img src="img/logo/莲花汽车.jpg"   height="100" width="100"  name="莲花汽车.jpg"/></li>
+				<li><img src="img/logo/菲亚特_南京.jpg"   height="100" width="100"  name="菲亚特_南京.jpg"/></li>
+				<li><img src="img/logo/菲亚特_广汽菲克.jpg"   height="100" width="100"  name="菲亚特_广汽菲克.jpg"/></li>
+				<li><img src="img/logo/菲亚特_进口.jpg"   height="100" width="100"  name="菲亚特_进口.jpg"/></li>
+				<li><img src="img/logo/萨博.jpg"   height="100" width="100"  name="萨博.jpg"/></li>
+				<li><img src="img/logo/蓝旗亚.jpg"   height="100" width="100"  name="蓝旗亚.jpg"/></li>
+				<li><img src="img/logo/蔚来.jpg"   height="100" width="100"  name="蔚来.jpg"/></li>
+				<li><img src="img/logo/裕路.jpg"   height="100" width="100"  name="裕路.jpg"/></li>
+				<li><img src="img/logo/西雅特.jpg"   height="100" width="100"  name="西雅特.jpg"/></li>
+				<li><img src="img/logo/观致.jpg"   height="100" width="100"  name="观致.jpg"/></li>
+				<li><img src="img/logo/讴歌_广汽.jpg"   height="100" width="100"  name="讴歌_广汽.jpg"/></li>
+				<li><img src="img/logo/讴歌_进口_.jpg"   height="100" width="100"  name="讴歌_进口_.jpg"/></li>
+				<li><img src="img/logo/谷歌.jpg"   height="100" width="100"  name="谷歌.jpg"/></li>
+				<li><img src="img/logo/赛麟_威蒙积泰.jpg"   height="100" width="100"  name="赛麟_威蒙积泰.jpg"/></li>
+				<li><img src="img/logo/起亚_进口_.jpg"   height="100" width="100"  name="起亚_进口_.jpg"/></li>
+				<li><img src="img/logo/路特斯.jpg"   height="100" width="100"  name="路特斯.jpg"/></li>
+				<li><img src="img/logo/路虎_进口.jpg"   height="100" width="100"  name="路虎_进口.jpg"/></li>
+				<li><img src="img/logo/车和家.jpg"   height="100" width="100"  name="车和家.jpg"/></li>
+				<li><img src="img/logo/迈凯伦.jpg"   height="100" width="100"  name="迈凯伦.jpg"/></li>
+				<li><img src="img/logo/道奇_进口.jpg"   height="100" width="100"  name="道奇_进口.jpg"/></li>
+				<li><img src="img/logo/野马汽车.jpg"   height="100" width="100"  name="野马汽车.jpg"/></li>
+				<li><img src="img/logo/金旅_厦门.jpg"   height="100" width="100"  name="金旅_厦门.jpg"/></li>
+				<li><img src="img/logo/金杯_华晨.jpg"   height="100" width="100"  name="金杯_华晨.jpg"/></li>
+				<li><img src="img/logo/金杯_华晨鑫源.jpg"   height="100" width="100"  name="金杯_华晨鑫源.jpg"/></li>
+				<li><img src="img/logo/金杯_绵阳.jpg"   height="100" width="100"  name="金杯_绵阳.jpg"/></li>
+				<li><img src="img/logo/金龙_厦门.jpg"   height="100" width="100"  name="金龙_厦门.jpg"/></li>
+				<li><img src="img/logo/铃木_昌河.jpg"   height="100" width="100"  name="铃木_昌河.jpg"/></li>
+				<li><img src="img/logo/铃木_进口_.jpg"   height="100" width="100"  name="铃木_进口_.jpg"/></li>
+				<li><img src="img/logo/铃木_长安.jpg"   height="100" width="100"  name="铃木_长安.jpg"/></li>
+				<li><img src="img/logo/长城.jpg"   height="100" width="100"  name="长城.jpg"/></li>
+				<li><img src="img/logo/长安.jpg"   height="100" width="100"  name="长安.jpg"/></li>
+				<li><img src="img/logo/长安跨越.jpg"   height="100" width="100"  name="长安跨越.jpg"/></li>
+				<li><img src="img/logo/长安轻型车.jpg"   height="100" width="100"  name="长安轻型车.jpg"/></li>
+				<li><img src="img/logo/长江EV_长江汽车.jpg"   height="100" width="100"  name="长江EV_长江汽车.jpg"/></li>
+				<li><img src="img/logo/阿尔法·罗密欧.jpg"   height="100" width="100"  name="阿尔法·罗密欧.jpg"/></li>
+				<li><img src="img/logo/阿斯顿·马丁.jpg"   height="100" width="100"  name="阿斯顿·马丁.jpg"/></li>
+				<li><img src="img/logo/陆风.jpg"   height="100" width="100"  name="陆风.jpg"/></li>
+				<li><img src="img/logo/陕汽通家.jpg"   height="100" width="100"  name="陕汽通家.jpg"/></li>
+				<li><img src="img/logo/雪佛兰_上汽通用.jpg"   height="100" width="100"  name="雪佛兰_上汽通用.jpg"/></li>
+				<li><img src="img/logo/雪佛兰_进口_.jpg"   height="100" width="100"  name="雪佛兰_进口_.jpg"/></li>
+				<li><img src="img/logo/雪铁龙_东风雪铁龙.jpg"   height="100" width="100"  name="雪铁龙_东风雪铁龙.jpg"/></li>
+				<li><img src="img/logo/雪铁龙_进口_.jpg"   height="100" width="100"  name="雪铁龙_进口_.jpg"/></li>
+				<li><img src="img/logo/雷丁.jpg"   height="100" width="100"  name="雷丁.jpg"/></li>
+				<li><img src="img/logo/雷克萨斯.jpg"   height="100" width="100"  name="雷克萨斯.jpg"/></li>
+				<li><img src="img/logo/雷克萨斯_雷克萨斯F.jpg"   height="100" width="100"  name="雷克萨斯_雷克萨斯F.jpg"/></li>
+				<li><img src="img/logo/雷诺_东风.jpg"   height="100" width="100"  name="雷诺_东风.jpg"/></li>
+				<li><img src="img/logo/雷诺_进口_.jpg"   height="100" width="100"  name="雷诺_进口_.jpg"/></li>
+				<li><img src="img/logo/雷诺三星.jpg"   height="100" width="100"  name="雷诺三星.jpg"/></li>
+				<li><img src="img/logo/霍顿.jpg"   height="100" width="100"  name="霍顿.jpg"/></li>
+				<li><img src="img/logo/领克.jpg"   height="100" width="100"  name="领克.jpg"/></li>
+				<li><img src="img/logo/领志_广汽丰田.jpg"   height="100" width="100"  name="领志_广汽丰田.jpg"/></li>
+				<li><img src="img/logo/东风风神_东风乘用车.jpg"   height="100" width="100"  name="东风风神_东风乘用车.jpg"/></li>
+				<li><img src="img/logo/东风风行.jpg"   height="100" width="100"  name="东风风行.jpg"/></li>
+				<li><img src="img/logo/中兴.jpg"   height="100" width="100"  name="中兴.jpg"/></li>
+				<li><img src="img/logo/中兴_广汽.jpg"   height="100" width="100"  name="中兴_广汽.jpg"/></li>
+				<li><img src="img/logo/中兴_陆地方舟.jpg"   height="100" width="100"  name="中兴_陆地方舟.jpg"/></li>
+				<li><img src="img/logo/中华_华晨.jpg"   height="100" width="100"  name="中华_华晨.jpg"/></li>
+				<li><img src="img/logo/丰田_进口.jpg"   height="100" width="100"  name="丰田_进口.jpg"/></li>
+				<li><img src="img/logo/之诺_华晨宝马.jpg"   height="100" width="100"  name="之诺_华晨宝马.jpg"/></li>
+				<li><img src="img/logo/乔治·巴顿.jpg"   height="100" width="100"  name="乔治·巴顿.jpg"/></li>
+				<li><img src="img/logo/乔治亚罗.jpg"   height="100" width="100"  name="乔治亚罗.jpg"/></li>
+				<li><img src="img/logo/九龙.jpg"   height="100" width="100"  name="九龙.jpg"/></li>
+				<li><img src="img/logo/云度_新能源.jpg"   height="100" width="100"  name="云度_新能源.jpg"/></li>
+				<li><img src="img/logo/五十铃.jpg"   height="100" width="100"  name="五十铃.jpg"/></li>
+				<li><img src="img/logo/五十铃_江西.jpg"   height="100" width="100"  name="五十铃_江西.jpg"/></li>
+				<li><img src="img/logo/五菱汽车_上汽通用五菱.jpg"   height="100" width="100"  name="五菱汽车_上汽通用五菱.jpg"/></li>
+				<li><img src="img/logo/众泰.jpg"   height="100" width="100"  name="众泰.jpg"/></li>
+				<li><img src="img/logo/佩奇奥.jpg"   height="100" width="100"  name="佩奇奥.jpg"/></li>
+				<li><img src="img/logo/佳跃_长安福特.jpg"   height="100" width="100"  name="佳跃_长安福特.jpg"/></li>
+				<li><img src="img/logo/依维柯_南京.jpg"   height="100" width="100"  name="依维柯_南京.jpg"/></li>
+				<li><img src="img/logo/依维柯_进口_.jpg"   height="100" width="100"  name="依维柯_进口_.jpg"/></li>
+				<li><img src="img/logo/保斐利.jpg"   height="100" width="100"  name="保斐利.jpg"/></li>
+				<li><img src="img/logo/保时捷.jpg"   height="100" width="100"  name="保时捷.jpg"/></li>
+				<li><img src="img/logo/光冈_自动车.jpg"   height="100" width="100"  name="光冈_自动车.jpg"/></li>
+				<li><img src="img/logo/克莱斯勒_SRT.jpg"   height="100" width="100"  name="克莱斯勒_SRT.jpg"/></li>
+				<li><img src="img/logo/克莱斯勒_东南汽车.jpg"   height="100" width="100"  name="克莱斯勒_东南汽车.jpg"/></li>
+				<li><img src="img/logo/克莱斯勒_北京.jpg"   height="100" width="100"  name="克莱斯勒_北京.jpg"/></li>
+				<li><img src="img/logo/克莱斯勒_进口.jpg"   height="100" width="100"  name="克莱斯勒_进口.jpg"/></li>
+				<li><img src="img/logo/兰博基尼.jpg"   height="100" width="100"  name="兰博基尼.jpg"/></li>
+				<li><img src="img/logo/凯佰赫.jpg"   height="100" width="100"  name="凯佰赫.jpg"/></li>
+				<li><img src="img/logo/凯翼.jpg"   height="100" width="100"  name="凯翼.jpg"/></li>
+				<li><img src="img/logo/凯迪拉克_上汽通用.jpg"   height="100" width="100"  name="凯迪拉克_上汽通用.jpg"/></li>
+				<li><img src="img/logo/凯迪拉克_进口.jpg"   height="100" width="100"  name="凯迪拉克_进口.jpg"/></li>
+				<li><img src="img/logo/别克_上汽通用别克.jpg"   height="100" width="100"  name="别克_上汽通用别克.jpg"/></li>
+	      		<li><img src="img/logo/ABT.jpg"   height="100" width="100"  name="ABT.jpg"/></li>
+				<li><img src="img/logo/AC Schnitzer.jpg"   height="100" width="100"  name="AC Schnitzer.jpg"/></li>
+				<li><img src="img/logo/Agile_Automotive.jpg"   height="100" width="100"  name="Agile_Automotive.jpg"/></li>
+				<li><img src="img/logo/ALPINA.jpg"   height="100" width="100"  name="ALPINA.jpg"/></li>
+				<li><img src="img/logo/Arash.jpg"   height="100" width="100"  name="Arash.jpg"/></li>
+				<li><img src="img/logo/ATS.jpg"   height="100" width="100"  name="ATS.jpg"/></li>
+				<li><img src="img/logo/Caterham.jpg"   height="100" width="100"  name="Caterham.jpg"/></li>
+				<li><img src="img/logo/Conquest.jpg"   height="100" width="100"  name="Conquest.jpg"/></li>
+				<li><img src="img/logo/Dacia.jpg"   height="100" width="100"  name="Dacia.jpg"/></li>
+				<li><img src="img/logo/Datsun.jpg"   height="100" width="100"  name="Datsun.jpg"/></li>
+				<li><img src="img/logo/DMC.jpg"   height="100" width="100"  name="DMC.jpg"/></li>
+				<li><img src="img/logo/Donkervoort.jpg"   height="100" width="100"  name="Donkervoort.jpg"/></li>
+				<li><img src="img/logo/DS_长安标致雪铁龙.jpg"   height="100" width="100"  name="DS_长安标致雪铁龙.jpg"/></li>
+				<li><img src="img/logo/Elemental.jpg"   height="100" width="100"  name="Elemental.jpg"/></li>
+				<li><img src="img/logo/Faraday_Future.jpg"   height="100" width="100"  name="Faraday_Future.jpg"/></li>
+				<li><img src="img/logo/Fisker.jpg"   height="100" width="100"  name="Fisker.jpg"/></li>
+				<li><img src="img/logo/FM Auto.jpg"   height="100" width="100"  name="FM Auto.jpg"/></li>
+				<li><img src="img/logo/GAZ_已下线_.jpg"   height="100" width="100"  name="GAZ_已下线_.jpg"/></li>
+				<li><img src="img/logo/GLM.jpg"   height="100" width="100"  name="GLM.jpg"/></li>
+				<li><img src="img/logo/GMC.jpg"   height="100" width="100"  name="GMC.jpg"/></li>
+				<li><img src="img/logo/GTA.jpg"   height="100" width="100"  name="GTA.jpg"/></li>
+				<li><img src="img/logo/Gumpert.jpg"   height="100" width="100"  name="Gumpert.jpg"/></li>
+				<li><img src="img/logo/Gumpert_Apollo.jpg"   height="100" width="100"  name="Gumpert_Apollo.jpg"/></li>
+				<li><img src="img/logo/Hennessey.jpg"   height="100" width="100"  name="Hennessey.jpg"/></li>
+				<li><img src="img/logo/Icona.jpg"   height="100" width="100"  name="Icona.jpg"/></li>
+				<li><img src="img/logo/Inferno.jpg"   height="100" width="100"  name="Inferno.jpg"/></li>
+				<li><img src="img/logo/Italdesign.jpg"   height="100" width="100"  name="Italdesign.jpg"/></li>
+				<li><img src="img/logo/Jeep_广汽菲克.jpg"   height="100" width="100"  name="Jeep_广汽菲克.jpg"/></li>
+				<li><img src="img/logo/Jeep_进口_.jpg"   height="100" width="100"  name="Jeep_进口_.jpg"/></li>
+				<li><img src="img/logo/KTM.jpg"   height="100" width="100"  name="KTM.jpg"/></li>
+				<li><img src="img/logo/LeSEE_乐视汽车.jpg"   height="100" width="100"  name="LeSEE_乐视汽车.jpg"/></li>
+				<li><img src="img/logo/LOCAL MOTORS.jpg"   height="100" width="100"  name="LOCAL MOTORS.jpg"/></li>
+				<li><img src="img/logo/Lorinser.jpg"   height="100" width="100"  name="Lorinser.jpg"/></li>
+				<li><img src="img/logo/Lucid_Motors.jpg"   height="100" width="100"  name="Lucid_Motors.jpg"/></li>
+				<li><img src="img/logo/MAGNA.jpg"   height="100" width="100"  name="MAGNA.jpg"/></li>
+				<li><img src="img/logo/Mahindra.jpg"   height="100" width="100"  name="Mahindra.jpg"/></li>
+				<li><img src="img/logo/Mazzanti.jpg"   height="100" width="100"  name="Mazzanti.jpg"/></li>
+				<li><img src="img/logo/MELKUS.jpg"   height="100" width="100"  name="MELKUS.jpg"/></li>
+				<li><img src="img/logo/MINI.jpg"   height="100" width="100"  name="MINI.jpg"/></li>
+				<li><img src="img/logo/MINI_JCW.jpg"   height="100" width="100"  name="MINI_JCW.jpg"/></li>
+				<li><img src="img/logo/nanoFLOWCELL.jpg"   height="100" width="100"  name="nanoFLOWCELL.jpg"/></li>
+				<li><img src="img/logo/NEVS.jpg"   height="100" width="100"  name="NEVS.jpg"/></li>
+				<li><img src="img/logo/Noble.jpg"   height="100" width="100"  name="Noble.jpg"/></li>
+				<li><img src="img/logo/Polestar.jpg"   height="100" width="100"  name="Polestar.jpg"/></li>
+				<li><img src="img/logo/Radical.jpg"   height="100" width="100"  name="Radical.jpg"/></li>
+				<li><img src="img/logo/RENOVO.jpg"   height="100" width="100"  name="RENOVO.jpg"/></li>
+				<li><img src="img/logo/Rezvani.jpg"   height="100" width="100"  name="Rezvani.jpg"/></li>
+				<li><img src="img/logo/Rimac.jpg"   height="100" width="100"  name="Rimac.jpg"/></li>
+				<li><img src="img/logo/Rinspeed.jpg"   height="100" width="100"  name="Rinspeed.jpg"/></li>
+				<li><img src="img/logo/Scion.jpg"   height="100" width="100"  name="Scion.jpg"/></li>
+				<li><img src="img/logo/SIN_CARS.jpg"   height="100" width="100"  name="SIN_CARS.jpg"/></li>
+				<li><img src="img/logo/smart.jpg"   height="100" width="100"  name="smart.jpg"/></li>
+				<li><img src="img/logo/SPIRRA_Oullim Motors.jpg"   height="100" width="100"  name="SPIRRA_Oullim Motors.jpg"/></li>
+				<li><img src="img/logo/SSC.jpg"   height="100" width="100"  name="SSC.jpg"/></li>
+				<li><img src="img/logo/SWM斯威汽车.jpg"   height="100" width="100"  name="SWM斯威汽车.jpg"/></li>
+				<li><img src="img/logo/TOROIDION.jpg"   height="100" width="100"  name="TOROIDION.jpg"/></li>
+				<li><img src="img/logo/Tramontana.jpg"   height="100" width="100"  name="Tramontana.jpg"/></li>
+				<li><img src="img/logo/TVR.jpg"   height="100" width="100"  name="TVR.jpg"/></li>
+				<li><img src="img/logo/Vanda_Electric.jpg"   height="100" width="100"  name="Vanda_Electric.jpg"/></li>
+				<li><img src="img/logo/Venturi.jpg"   height="100" width="100"  name="Venturi.jpg"/></li>
+				<li><img src="img/logo/VLF Automotive.jpg"   height="100" width="100"  name="VLF Automotive.jpg"/></li>
+				<li><img src="img/logo/W Motors.jpg"   height="100" width="100"  name="W Motors.jpg"/></li>
+				<li><img src="img/logo/YAMAHA.jpg"   height="100" width="100"  name="YAMAHA.jpg"/></li>
+				<li><img src="img/logo/Zenvo.jpg"   height="100" width="100"  name="Zenvo.jpg"/></li>
+				<li><img src="img/logo/一汽_天津一汽.jpg"   height="100" width="100"  name="一汽_天津一汽.jpg"/></li>
+				<li><img src="img/logo/一汽_通用.jpg"   height="100" width="100"  name="一汽_通用.jpg"/></li>
+				<li><img src="img/logo/三菱_中华三菱.jpg"   height="100" width="100"  name="三菱_中华三菱.jpg"/></li>
+				<li><img src="img/logo/三菱_广汽.jpg"   height="100" width="100"  name="三菱_广汽.jpg"/></li>
+				<li><img src="img/logo/三菱_进口_.jpg"   height="100" width="100"  name="三菱_进口_.jpg"/></li>
+				<li><img src="img/logo/上汽大通.jpg"   height="100" width="100"  name="上汽大通.jpg"/></li>
+				<li><img src="img/logo/世爵.jpg"   height="100" width="100"  name="世爵.jpg"/></li>
+				<li><img src="img/logo/东风_汽车.jpg"   height="100" width="100"  name="东风_汽车.jpg"/></li>
+				<li><img src="img/logo/东风_郑州日产.jpg"   height="100" width="100"  name="东风_郑州日产.jpg"/></li>
+				
+				<li><img src="img/logo/别克_进口_.jpg"   height="100" width="100"  name="别克_进口_.jpg"/></li>
+				<li><img src="img/logo/前途.jpg"   height="100" width="100"  name="前途.jpg"/></li>
+				<li><img src="img/logo/力帆汽车.jpg"   height="100" width="100"  name="力帆汽车.jpg"/></li>
+				<li><img src="img/logo/劳斯莱斯.jpg"   height="100" width="100"  name="劳斯莱斯.jpg"/></li>
+				<li><img src="img/logo/北京_北京汽车.jpg"   height="100" width="100"  name="北京_北京汽车.jpg"/></li>
+				<li><img src="img/logo/北汽威旺_北汽新能源.jpg"   height="100" width="100"  name="北汽威旺_北汽新能源.jpg"/></li>
+				<li><img src="img/logo/北汽幻速_北汽银翔.jpg"   height="100" width="100"  name="北汽幻速_北汽银翔.jpg"/></li>
+				<li><img src="img/logo/北汽道达_北汽瑞丽.jpg"   height="100" width="100"  name="北汽道达_北汽瑞丽.jpg"/></li>
+				<li><img src="img/logo/华凯.jpg"   height="100" width="100"  name="华凯.jpg"/></li>
+				<li><img src="img/logo/华利_天津汽车.jpg"   height="100" width="100"  name="华利_天津汽车.jpg"/></li>
+				<li><img src="img/logo/华普.jpg"   height="100" width="100"  name="华普.jpg"/></li>
+				<li><img src="img/logo/华泰.jpg"   height="100" width="100"  name="华泰.jpg"/></li>
+				<li><img src="img/logo/华泰新能源.jpg"   height="100" width="100"  name="华泰新能源.jpg"/></li>
+				<li><img src="img/logo/华颂_华晨.jpg"   height="100" width="100"  name="华颂_华晨.jpg"/></li>
+				<li><img src="img/logo/华骐_东风悦达起亚.jpg"   height="100" width="100"  name="华骐_东风悦达起亚.jpg"/></li>
+				<li><img src="img/logo/南京金龙.jpg"   height="100" width="100"  name="南京金龙.jpg"/></li>
+				<li><img src="img/logo/卡升_浙江卡尔森.jpg"   height="100" width="100"  name="卡升_浙江卡尔森.jpg"/></li>
+				<li><img src="img/logo/卡威.jpg"   height="100" width="100"  name="卡威.jpg"/></li>
+				<li><img src="img/logo/卡尔森.jpg"   height="100" width="100"  name="卡尔森.jpg"/></li>
+				<li><img src="img/logo/双环.jpg"   height="100" width="100"  name="双环.jpg"/></li>
+				<li><img src="img/logo/双龙.jpg"   height="100" width="100"  name="双龙.jpg"/></li>
+				<li><img src="img/logo/吉利汽车.jpg"   height="100" width="100"  name="吉利汽车.jpg"/></li>
+				<li><img src="img/logo/吉普_北京.jpg"   height="100" width="100"  name="吉普_北京.jpg"/></li>
+				<li><img src="img/logo/君马汽车.jpg"   height="100" width="100"  name="君马汽车.jpg"/></li>
+				<li><img src="img/logo/启辰_东风.jpg"   height="100" width="100"  name="启辰_东风.jpg"/></li>
+				<li><img src="img/logo/哈飞.jpg"   height="100" width="100"  name="哈飞.jpg"/></li>
+				<li><img src="img/logo/国金汽车.jpg"   height="100" width="100"  name="国金汽车.jpg"/></li>
+				<li><img src="img/logo/塔塔.jpg"   height="100" width="100"  name="塔塔.jpg"/></li>
+				<li><img src="img/logo/大众_上汽大众.jpg"   height="100" width="100"  name="大众_上汽大众.jpg"/></li>
+				<li><img src="img/logo/大众_进口.jpg"   height="100" width="100"  name="大众_进口.jpg"/></li>
+				<li><img src="img/logo/大发_一汽吉林.jpg"   height="100" width="100"  name="大发_一汽吉林.jpg"/></li>
+				<li><img src="img/logo/大发_进口_.jpg"   height="100" width="100"  name="大发_进口_.jpg"/></li>
+				<li><img src="img/logo/大迪.jpg"   height="100" width="100"  name="大迪.jpg"/></li>
+				<li><img src="img/logo/奇点汽车.jpg"   height="100" width="100"  name="奇点汽车.jpg"/></li>
+				<li><img src="img/logo/奇瑞_新能源.jpg"   height="100" width="100"  name="奇瑞_新能源.jpg"/></li>
+				<li><img src="img/logo/奔腾_一汽.jpg"   height="100" width="100"  name="奔腾_一汽.jpg"/></li>
+				<li><img src="img/logo/奔驰-北京.jpg"   height="100" width="100"  name="奔驰-北京.jpg"/></li>
+				<li><img src="img/logo/奔驰_BAC.jpg"   height="100" width="100"  name="奔驰_BAC.jpg"/></li>
+				<li><img src="img/logo/奔驰_梅赛德斯-AMG.jpg"   height="100" width="100"  name="奔驰_梅赛德斯-AMG.jpg"/></li>
+				<li><img src="img/logo/奔驰_梅赛德斯-迈巴赫.jpg"   height="100" width="100"  name="奔驰_梅赛德斯-迈巴赫.jpg"/></li>
+				<li><img src="img/logo/奔驰_福建.jpg"   height="100" width="100"  name="奔驰_福建.jpg"/></li>
+				<li><img src="img/logo/奔驰_迈巴赫.jpg"   height="100" width="100"  name="奔驰_迈巴赫.jpg"/></li>
+				<li><img src="img/logo/奔驰_进口_.jpg"   height="100" width="100"  name="奔驰_进口_.jpg"/></li>
+				<li><img src="img/logo/奥迪_Audi_Sport.jpg"   height="100" width="100"  name="奥迪_Audi_Sport.jpg"/></li>
+				<li><img src="img/logo/奥迪_一汽-大众.jpg"   height="100" width="100"  name="奥迪_一汽-大众.jpg"/></li>
+				<li><img src="img/logo/奥迪_进口_.jpg"   height="100" width="100"  name="奥迪_进口_.jpg"/></li>
+				<li><img src="img/logo/如虎.jpg"   height="100" width="100"  name="如虎.jpg"/></li>
+				<li><img src="img/logo/威兹曼.jpg"   height="100" width="100"  name="威兹曼.jpg"/></li>
+				<li><img src="img/logo/威马汽车.jpg"   height="100" width="100"  name="威马汽车.jpg"/></li>
+				<li><img src="img/logo/威麟_奇瑞汽车.jpg"   height="100" width="100"  name="威麟_奇瑞汽车.jpg"/></li>
+				<li><img src="img/logo/宇通客车.jpg"   height="100" width="100"  name="宇通客车.jpg"/></li>
+				<li><img src="img/logo/安凯客车.jpg"   height="100" width="100"  name="安凯客车.jpg"/></li>
+				<li><img src="img/logo/宝沃_进口_.jpg"   height="100" width="100"  name="宝沃_进口_.jpg"/></li>
+				<li><img src="img/logo/宝沃汽车.jpg"   height="100" width="100"  name="宝沃汽车.jpg"/></li>
+				<li><img src="img/logo/宝马M.jpg"   height="100" width="100"  name="宝马M.jpg"/></li>
+				<li><img src="img/logo/宝马_进口_.jpg"   height="100" width="100"  name="宝马_进口_.jpg"/></li>
+				<li><img src="img/logo/宾利.jpg"   height="100" width="100"  name="宾利.jpg"/></li>
+				<li><img src="img/logo/宾尼法利纳.jpg"   height="100" width="100"  name="宾尼法利纳.jpg"/></li>
+				<li><img src="img/logo/小鹏汽车.jpg"   height="100" width="100"  name="小鹏汽车.jpg"/></li>
+				<li><img src="img/logo/巴博斯.jpg"   height="100" width="100"  name="巴博斯.jpg"/></li>
+				<li><img src="img/logo/布加迪.jpg"   height="100" width="100"  name="布加迪.jpg"/></li>
+				<li><img src="img/logo/帕加尼.jpg"   height="100" width="100"  name="帕加尼.jpg"/></li>
+				<li><img src="img/logo/广汽传祺_广汽乘用车.jpg"   height="100" width="100"  name="广汽传祺_广汽乘用车.jpg"/></li>
+				<li><img src="img/logo/广汽吉奥.jpg"   height="100" width="100"  name="广汽吉奥.jpg"/></li>
+				<li><img src="img/logo/广通客车.jpg"   height="100" width="100"  name="广通客车.jpg"/></li>
+				<li><img src="img/logo/庆铃汽车.jpg"   height="100" width="100"  name="庆铃汽车.jpg"/></li>
+				<li><img src="img/logo/康迪全球鹰_电动汽车.jpg"   height="100" width="100"  name="康迪全球鹰_电动汽车.jpg"/></li>
+				<li><img src="img/logo/开利_一汽-大众.jpg"   height="100" width="100"  name="开利_一汽-大众.jpg"/></li>
+				<li><img src="img/logo/开瑞.jpg"   height="100" width="100"  name="开瑞.jpg"/></li>
+				<li><img src="img/logo/弗那萨利.jpg"   height="100" width="100"  name="弗那萨利.jpg"/></li>
+				<li><img src="img/logo/御捷_新能源.jpg"   height="100" width="100"  name="御捷_新能源.jpg"/></li>
+				<li><img src="img/logo/恒天_汽车.jpg"   height="100" width="100"  name="恒天_汽车.jpg"/></li>
+				<li><img src="img/logo/悍马.jpg"   height="100" width="100"  name="悍马.jpg"/></li>
+				<li><img src="img/logo/成功汽车.jpg"   height="100" width="100"  name="成功汽车.jpg"/></li>
+				<li><img src="img/logo/拉达.jpg"   height="100" width="100"  name="拉达.jpg"/></li>
+				<li><img src="img/logo/捷豹.jpg"   height="100" width="100"  name="捷豹.jpg"/></li>
+				<li><img src="img/logo/捷豹_奇瑞捷豹路虎.jpg"   height="100" width="100"  name="捷豹_奇瑞捷豹路虎.jpg"/></li>
+				<li><img src="img/logo/摩根.jpg"   height="100" width="100"  name="摩根.jpg"/></li>
+				<li><img src="img/logo/斯太尔.jpg"   height="100" width="100"  name="斯太尔.jpg"/></li>
+				<li><img src="img/logo/斯巴鲁.jpg"   height="100" width="100"  name="斯巴鲁.jpg"/></li>
+				<li><img src="img/logo/斯柯达_上汽斯柯达.jpg"   height="100" width="100"  name="斯柯达_上汽斯柯达.jpg"/></li>
+				<li><img src="img/logo/斯柯达_进口_.jpg"   height="100" width="100"  name="斯柯达_进口_.jpg"/></li>
+				<li><img src="img/logo/斯达泰克.jpg"   height="100" width="100"  name="斯达泰克.jpg"/></li>
+				<li><img src="img/logo/新凯.jpg"   height="100" width="100"  name="新凯.jpg"/></li>
+				<li><img src="img/logo/日产_东风日产.jpg"   height="100" width="100"  name="日产_东风日产.jpg"/></li>
+				<li><img src="img/logo/日产_进口_.jpg"   height="100" width="100"  name="日产_进口_.jpg"/></li>
+				<li><img src="img/logo/昌河.jpg"   height="100" width="100"  name="昌河.jpg"/></li>
+				<li><img src="img/logo/昶洧.jpg"   height="100" width="100"  name="昶洧.jpg"/></li>
+				
+				<li><img src="img/logo/首望_北京现代.jpg"   height="100" width="100"  name="首望_北京现代.jpg"/></li>
+				<li><img src="img/logo/马自达_一汽马自达.jpg"   height="100" width="100"  name="马自达_一汽马自达.jpg"/></li>
+				<li><img src="img/logo/马自达_进口_.jpg"   height="100" width="100"  name="马自达_进口_.jpg"/></li>
+				<li><img src="img/logo/马自达_长安.jpg"   height="100" width="100"  name="马自达_长安.jpg"/></li>
+				<li><img src="img/logo/黄海_曙光汽车.jpg"   height="100" width="100"  name="黄海_曙光汽车.jpg"/></li>
+
+	      	</ul>
+      	</div>
+      </div>  
+    </div>
+    
+</div>  
+
+
+  <!-- imgModal -->
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="imgModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">预览发布图片</h4>
+            </div>
+            <div class="modal-body">
+                <div class="img-con">
+                    <div class="img-box clearfix">
+                        <div class="slide_container">
+                            <ul class="rslides" id="slider">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button class="slide1_nav prev btn btn-default" style="float: left">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <p class="num">
+                    	<span style="color: red">
+                    	  <i name="minNum" style="display: none;"></i>
+                     </span>/
+                        <i name="maxNum" style="display: none;"></i>
+                    </p>
+                    <p class="title photoName"></p>
+                    <button class="slide1_nav next btn btn-default" style="float: right">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="out-box">
+                  <a id="out-btn" class="btn btn-danger out-btn">导出全部</a>
+                  <a id="out" class="btn btn-danger out">导出全部</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<canvas id="aa" height="1000" width="500" style="display:none;"></canvas>
+
+  <script src="dist/js/jquery-2.1.1.min.js"></script>
+  <!--<script type="text/javascript" src="static/js/main.js"></script>-->
+  <script type="text/javascript" src="static/js/base64.js"></script> <!-- 默认加载图片  -->
+  <script type="text/javascript" src="build/script/e-smart-zoom-jquery.js"></script>
+  <script type="text/javascript" src="build/script/jquery.mousewheel.min.js"></script>
+  <!-- 预览发布 -->
+  <script src="dist/js/bootstrap.min.js"></script>
+  
+  <!-- 重新定义的方法  --->
+  <script src="static/js/globalVariable.js"></script>   <!-- 项目用到的全部全局变量--->
+  <script src="static/js/parameterChange.js"></script>  <!-- 更改请求参数,向后台发请求--->
+  <script src="static/js/export.js"></script>			<!-- 默认显示的图片--->
+  
+  <script src="static/js/upload_imgfile.js"></script>   <!-- 上传图片--->
+  <script src="static/js/click_size.js"></script>       <!-- 点选尺寸--->
+  <script src="static/js/showPosition.js"></script>     <!-- 显示正确位置--->
+  
+  
+  <script src="static/js/pageClickEffect.js"></script>  <!-- 页面点击的效果文件--->
+</body>
+</html>
