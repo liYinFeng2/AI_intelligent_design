@@ -1,4 +1,5 @@
-var img = "http://10.168.78.79:3000/intelligent-design/img/aa.jpg";//imgurl 就是你的图片路径 
+let img = "http://10.168.78.79:3000/AI_intelligent_design/img/aa.jpg";//imgurl 就是你的图片路径 
+//let img = "http://10.168.78.79/img/aa.jpg";//imgurl 就是你的图片路径 
 var base_img_width,base_img_height;
 var base64; 
 function getBase64Image(img) { 

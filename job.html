@@ -2,11 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*" />
   <title>AI智能设计</title>
   <link rel="stylesheet" type="text/css" href="build/css/job.css">
   <link rel="stylesheet" href="dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="dist/css/index.min.css">
+  <link rel="stylesheet" href="static/jQuery_ui/css/jquery-ui.min.css">
 </head>
 <body>
   <div class="header">
@@ -27,16 +29,11 @@
   
   <div class="design_container">
     <div class="content">
-    	<!--<div id="sure">确定缩放比</div>-->
-      <div class="component">
-        <!-- This image must be on the same domain as the demo or it will not work on a local file system -->
-        <!-- http://en.wikipedia.org/wiki/Cross-origin_resource_sharing -->
         <img id="resize-image" class="resize-image" src="" alt="image for resizing">
-        <!-- <button class="btn-crop js-crop">Crop</button> -->
       </div>
     </div>
-    <!-- /content -->
   </div>
+  
   <div class="setjob-content">
   	<!-- 主标题  -->
     <div class="main-title">
@@ -535,6 +532,7 @@
 <canvas id="aa" height="1000" width="500" style="display:none;"></canvas>
 
   <script src="dist/js/jquery-2.1.1.min.js"></script>
+  <script src="static/jQuery_ui/jquery-ui.min.js"></script>
   <!--<script type="text/javascript" src="static/js/main.js"></script>-->
   <script type="text/javascript" src="static/js/base64.js"></script> <!-- 默认加载图片  -->
   <script type="text/javascript" src="build/script/e-smart-zoom-jquery.js"></script>
