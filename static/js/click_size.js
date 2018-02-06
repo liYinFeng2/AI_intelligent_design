@@ -34,7 +34,10 @@ $(document).on('click',".setjob-content .sel-size ul li:not(.seemore)",function(
         });
 
         let idname = tempSize[0]+'_'+tempSize[1];
+        $(".design_content #"+idname).parent().remove();
         $(".design_content #"+idname).remove();
+        //console.log('--->',$("#"+idname).parent().html());
+        
         
         //console.log('历史值 history_size_arr',history_size_arr);
         //console.log('历史值 history_res_obj',history_res_obj);

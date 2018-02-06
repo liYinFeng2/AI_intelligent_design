@@ -38,12 +38,25 @@ function public_request_interface(flag_type){
            if(flag_type == 4){
             choise_logo_returnRes(res);
            }
-           //
+           //拖动背景图
+           if(flag_type == 6){
+            move_bg_banner_returnRes(res);
+           }
+           //缩放背景图
+           if(flag_type == 7){
+            zoom_img_returnRes(res); 
+           }
+           //拖动slogan裁剪框
+           if(flag_type == 8){
+            move_slogan_banner_returnRes(res);
+           }
 
            
-           //隐藏页面的裁剪框、背景图
+           //隐藏页面的裁剪框、背景图、可移动范围区域
            $(".resize-image").hide();
            $(".move-line").hide();
+           $("#content").hide();
+           $("#zoom_box").hide();
         },
         error: function(res) {
           console.log('错误信息',res);
@@ -53,14 +66,10 @@ function public_request_interface(flag_type){
 
 
 
-//拖动背景图(设置全局变量)   -------  处理返回结果 6 
-function move_bg_banner(){
-
-}
-//缩放背景图(设置全局变量)  -------  处理返回结果 7
 
 
-//拖动title裁剪框(设置全局变量)  -------  处理返回结果 8
+
+
 
 
 
@@ -81,7 +90,9 @@ function edit_title(){
 
     logo_type_list = [];
     for(let i =0;i<history_size_arr.length;i++){
-    	logo_type_list[i] = logo_type_choise_list;
+        if(logo_type_choise_list.length > 0){
+            logo_type_list[i] = logo_type_choise_list;
+        }
     }
     //ajax请求
     public_request_interface(1);
@@ -159,6 +170,9 @@ function choise_or_delete_size(){
     resize_k_list = [];
 
     logo_type_list = [];
+    if(logo_type_choise_list.length > 0){
+        logo_type_list[0] = logo_type_choise_list;
+    }
     //ajax请求
     public_request_interface(3);
 }
@@ -273,4 +287,146 @@ function delete_logo(){
 
 function delete_logo_returnRes(){
 
+}
+
+//拖动背景图(设置全局变量)   -------  处理返回结果 6 
+function move_bg_banner(){
+    // start_top,start_left,end_top,end_left,now_index,now_size
+    let d_value_y = arguments[2] - arguments[0];
+    let d_value_x = arguments[3] - arguments[1];
+
+    let index_num = arguments[4];
+    file_url = $('#resize-image').attr('src');
+    titles_list = [];
+    $('.setjob-content .title').each(function() {
+        titles_list.push($(this).val());
+    });
+
+    size_list = [];
+    size_list.push(arguments[5]);
+    matting_rect_list = [];
+    matting_rect_list = [{'top':0,'bottom':0,'left':0,'right':0}];
+    
+    matting_rect_list[0]['top'] = history_res_obj[index_num].matting_rect_list[0]['top'] - d_value_y;
+    matting_rect_list[0]['bottom'] = history_res_obj[index_num].matting_rect_list[0]['bottom'] - d_value_y;
+    matting_rect_list[0]['left'] = history_res_obj[index_num].matting_rect_list[0]['left'] - d_value_x;
+    matting_rect_list[0]['right'] = history_res_obj[index_num].matting_rect_list[0]['right'] - d_value_x;
+
+    slogan_rect_list = [];
+    
+    resize_k_list = [];
+    resize_k_list.push(history_res_obj[index_num].resize_k_list[0]);
+
+    logo_type_list = [];
+    if(logo_type_choise_list.length > 0){
+        logo_type_list[0] = logo_type_choise_list;
+    }
+
+    //ajax请求
+    public_request_interface(6);
+}
+function move_bg_banner_returnRes(res){
+    //console.log('更改的索引位置-->'+now_index);
+    $('.design_content .design_overlay').eq(now_index).find('.overlay').css('background-image','url()');
+    let img_base = res.base64_image_list[0].replace('/\+/g','2B%');
+    $('.design_content .design_overlay').eq(now_index).find('.overlay').css('background-image','url(data:image/jpeg;base64,'+ img_base + ')');
+
+    //更改历史记录
+    reset_data(res);
+}
+//缩放背景图(设置全局变量)  -------  处理返回结果 7
+function zoom_img(){
+    file_url = $('#resize-image').attr('src');
+    titles_list = [];
+    $('.setjob-content .title').each(function() {
+        titles_list.push($(this).val());
+    });
+    size_list = history_size_arr;
+    matting_rect_list = [];
+	slogan_rect_list = [];
+    resize_k_list = [];
+    resize_k_list.push(arguments[0]);
+
+    logo_type_list = [];
+    if(logo_type_choise_list.length > 0){
+        logo_type_list[0] = logo_type_choise_list;
+    }
+    //ajax请求
+    public_request_interface(7);
+
+}
+function zoom_img_returnRes(res){
+    //console.log('--->',res);
+    console.log('更改的索引位置-->'+now_index);
+    $('.design_content .design_overlay').eq(now_index).find('.overlay').css('background-image','url()');
+    let img_base = res.base64_image_list[0].replace('/\+/g','2B%');
+    $('.design_content .design_overlay').eq(now_index).find('.overlay').css('background-image','url(data:image/jpeg;base64,'+ img_base + ')');
+    let ss = 'data:image/jpeg;base64,'+ img_base;
+    //console.log('------>',ss);
+
+    //更改历史记录
+    reset_data(res);
+}
+
+//拖动title裁剪框(设置全局变量)  -------  处理返回结果 8
+function move_slogan_banner(){
+    // slogan_start_top,slogan_start_left,slogan_end_top,slogan_end_left,now_index,now_size
+    let d_value_y = arguments[2] - arguments[0];
+    let d_value_x = arguments[3] - arguments[1];
+
+    let index_num = arguments[4];
+    file_url = $('#resize-image').attr('src');
+    titles_list = [];
+    $('.setjob-content .title').each(function() {
+        titles_list.push($(this).val());
+    });
+
+    size_list = [];
+    size_list.push(arguments[5]);
+    matting_rect_list = [];
+
+    slogan_rect_list = [];
+    slogan_rect_list = [{'top':0,'bottom':0,'left':0,'right':0}];
+    console.log('当前编辑的对象slogan_rect_list数组-->',history_res_obj[index_num].slogan_rect_list[0]);
+    
+    slogan_rect_list[0]['top'] = history_res_obj[index_num].slogan_rect_list[0]['top'] + d_value_y;
+    slogan_rect_list[0]['bottom'] = history_res_obj[index_num].slogan_rect_list[0]['bottom'] + d_value_y;
+    slogan_rect_list[0]['left'] = history_res_obj[index_num].slogan_rect_list[0]['left'] + d_value_x;
+    slogan_rect_list[0]['right'] = history_res_obj[index_num].slogan_rect_list[0]['right'] + d_value_x;
+    console.log('新的数组-->',slogan_rect_list[0]);
+    resize_k_list = [];
+    resize_k_list.push(history_res_obj[index_num].resize_k_list[0]);
+
+    logo_type_list = [];
+    if(logo_type_choise_list.length > 0){
+        logo_type_list[0] = logo_type_choise_list;
+    }
+
+    console.log('当前编辑的位置--->'+index_num);
+    //ajax请求
+    public_request_interface(8);
+}
+function move_slogan_banner_returnRes(res){
+    //console.log('更改的索引位置-->'+now_index);
+    $('.design_content .design_overlay').eq(now_index).find('.overlay').css('background-image','url()');
+    let img_base = res.base64_image_list[0].replace('/\+/g','2B%');
+    $('.design_content .design_overlay').eq(now_index).find('.overlay').css('background-image','url(data:image/jpeg;base64,'+ img_base + ')');
+
+    //更改历史记录
+    reset_data(res);
+}
+
+
+function reset_data(res){
+     //更改历史记录
+     history_res_obj[now_index].adder_sreen_list[0] = res.adder_sreen_list[0];
+     history_res_obj[now_index].base64_image_list[0] = res.base64_image_list[0];
+     history_res_obj[now_index].font_size_list[0] = res.font_size_list[0];
+     history_res_obj[now_index].logo_rect_list[0] = res.logo_rect_list[0];
+     history_res_obj[now_index].logo_type_list[0] = res.logo_type_list[0];
+     history_res_obj[now_index].matting_rect_list[0] = res.matting_rect_list[0];
+     history_res_obj[now_index].resize_k_list[0] = res.resize_k_list[0];
+     history_res_obj[now_index].slogan_rect_list[0] = res.slogan_rect_list[0];
+     history_res_obj[now_index].title_color_list[0] = res.title_color_list[0];
+     history_res_obj[now_index].txt_sp_list[0] = res.txt_sp_list[0];
 }

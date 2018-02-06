@@ -17,7 +17,7 @@ let logo_type_choise_list = [];  //当前选择的logo图标
 
 
 let now_index_id; //当前选择的尺寸
-
+let now_index;    //点击的裁剪框的索引位置
 
 
 
